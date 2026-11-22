@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>sun_r creative</title>
-<meta name="description" content="sun_r creative — S/TOOL、NURS など、sun_r がつくるアプリとツール。">
+<meta name="description" content="sun_r creative — 個人事業 patch が開発・提供する、S/TOOL・NURS などのアプリとツール。">
 <link rel="canonical" href="https://sun-r-brands.pages.dev/creative">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="sun_r brands">
 <meta property="og:title" content="sun_r creative">
-<meta property="og:description" content="sun_r creative — S/TOOL、NURS など、sun_r がつくるアプリとツール。">
+<meta property="og:description" content="sun_r creative — 個人事業 patch が開発・提供する、S/TOOL・NURS などのアプリとツール。">
 <meta property="og:url" content="https://sun-r-brands.pages.dev/creative">
 <meta property="og:image" content="https://sun-r-brands.pages.dev/images/og-creative.png">
 <meta property="og:image:width" content="1200">
@@ -58,6 +58,7 @@ header.scrolled{box-shadow:0 2px 16px rgba(17,17,17,.06)}
 .header-logo img{transition:transform .4s ease}.header-logo:hover img{transform:rotate(-8deg)}
 #hand,#foot{animation:fadeIn .4s ease both}
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal,.stagger>*{opacity:1;transform:none}}
+@media(min-width:861px){.about-label{padding-top:22px}}
 /* stagger & touch motion */
 @keyframes rpop{0%{opacity:0;transform:scale(.6) rotate(-14deg)}60%{opacity:1;transform:scale(1.08) rotate(3deg)}100%{opacity:1;transform:none}}
 .stagger>*{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i,0)*110ms)}
@@ -108,7 +109,7 @@ a.brand-row:active p:first-of-type,a.work-link:active p:first-of-type{color:#111
 <div class="reveal" style="display: flex; flex-direction: column; gap: 12px">
 <p class="label" style="margin: 0">WORKS</p>
 <h2 style="margin: 0; font-weight: 500; font-size: clamp(24px,2.8vw,32px); letter-spacing: 0.04em">制作中のアプリ</h2>
-<p style="margin: 8px 0 0; color: #555555; font-size: 14px">暮らしと仕事の「あったらいいな」を形にしたアプリをつくっています。公開でき次第、ここから使えるようにします。</p>
+<p style="margin: 8px 0 0; color: #555555; font-size: 14px">暮らしと仕事の「あったらいいな」を形にしたアプリを、個人事業 patch が開発・提供しています。公開でき次第、ここから使えるようにします。</p>
 </div>
 <div class="stagger" style="border-top: 1px solid #E6E1DB">
 <a class="work-row work-link" href="https://stool.nyancolosan.workers.dev/" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; display: flex; align-items: flex-start; gap: clamp(16px,3vw,24px); padding: clamp(22px,3vw,30px) 0; border-bottom: 1px solid #E6E1DB">
@@ -116,6 +117,7 @@ a.brand-row:active p:first-of-type,a.work-link:active p:first-of-type{color:#111
 <div style="flex: 1 1 auto; min-width: 0">
 <p style="margin: 0; font-family: 'Jost', sans-serif; font-size: clamp(22px,2.4vw,28px); letter-spacing: 0.08em; line-height: 1.3">S/TOOL</p>
 <p style="margin: 6px 0 0; color: #555555; font-size: 14px">部屋のレイアウトや家具の配置を考えるための、ルームプランニングアプリ</p>
+<p style="margin: 8px 0 0; font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 0.12em; color: #6B5F53">by patch</p>
 <p style="margin: 10px 0 0; display: flex; flex-wrap: wrap; gap: 6px"><span class="chip">WEB</span><span class="chip">iOS</span></p>
 </div>
 <span class="work-go" style="flex: none; font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 0.18em; color: #6B5F53; white-space: nowrap; padding-top: 8px">OPEN →</span>
@@ -125,10 +127,23 @@ a.brand-row:active p:first-of-type,a.work-link:active p:first-of-type{color:#111
 <p style="margin: 0; font-family: 'Jost', sans-serif; font-size: clamp(22px,2.4vw,28px); letter-spacing: 0.08em; line-height: 1.3">NURS</p>
 <p style="margin: 2px 0 0; font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 0.08em; color: #6B6B6B">Nurse's Utility &amp; Resource System</p>
 <p style="margin: 6px 0 0; color: #555555; font-size: 14px">看護師の仕事をサポートする、看護師向けアプリ</p>
+<p style="margin: 8px 0 0; font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 0.12em; color: #6B5F53">by patch</p>
 </div>
 <span style="flex: none; font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 0.18em; color: #6B5F53; white-space: nowrap; padding-top: 8px">IN DEVELOPMENT</span>
 </div>
 </div>
+</div>
+</section>
+
+<section id="about" style="border-top: 1px solid #E6E1DB; padding: clamp(48px,6vw,88px) 0">
+<div class="wrap two">
+<h2 class="label about-label reveal" style="margin: 0">ABOUT</h2>
+<dl class="stagger" style="margin: 0; border-top: 1px solid #E6E1DB">
+<div class="menu-row" style="justify-content: flex-start; align-items: baseline; gap: clamp(20px,4vw,48px)"><dt style="flex: none; width: 6em; color: #6B6B6B; font-size: 14px">屋号</dt><dd style="margin: 0; min-width: 0; font-family: 'Jost', 'Zen Kaku Gothic New', sans-serif; letter-spacing: 0.06em">patch</dd></div>
+<div class="menu-row" style="justify-content: flex-start; align-items: baseline; gap: clamp(20px,4vw,48px)"><dt style="flex: none; width: 6em; color: #6B6B6B; font-size: 14px">代表</dt><dd style="margin: 0; min-width: 0">門林 玲</dd></div>
+<div class="menu-row" style="justify-content: flex-start; align-items: baseline; gap: clamp(20px,4vw,48px)"><dt style="flex: none; width: 6em; color: #6B6B6B; font-size: 14px">事業内容</dt><dd style="margin: 0; min-width: 0">アプリ・ツールの開発と提供</dd></div>
+<div class="menu-row" style="justify-content: flex-start; align-items: baseline; gap: clamp(20px,4vw,48px)"><dt style="flex: none; width: 6em; color: #6B6B6B; font-size: 14px">アプリ</dt><dd style="margin: 0; min-width: 0; font-family: 'Jost', 'Zen Kaku Gothic New', sans-serif; letter-spacing: 0.06em">S/TOOL・NURS</dd></div>
+</dl>
 </div>
 </section>
 
