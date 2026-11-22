@@ -9,9 +9,9 @@ sun_r nail のサイト・リポジトリには手を入れないこと（nail �
 public/
   index.html     ブランドトップ（4ブランドの入口）     黒のR
   shop.html      sun_r handmade shop（COMING SOON）    マスタード
-  creative.html  sun_r creative（アプリ）               グレー
+  creative.html  sun_r creative（アプリ）               グレージュ
   build.html     sun_r build（キッチン施工・COMING SOON） オレンジ
-  images/        ロゴ（R：black/blue/orange/yellow/gray）、ブランド番号（num-23/07/24/1329）、OGP画像（og-*.png）
+  images/        ロゴ（R：black/blue/orange/yellow/greige）、ブランド番号（num-23/07/24/1329）、OGP画像（og-*.png）
 wrangler.jsonc   Cloudflare 設定（name: sun-r-brands）
 ```
 
@@ -19,7 +19,7 @@ wrangler.jsonc   Cloudflare 設定（name: sun-r-brands）
 |---|---|---|---|---|
 | sun_r nail | `#134CA5` | `#134CA5` | 23 | **外部サイト** https://sun-r-nail.pages.dev/ |
 | sun_r handmade shop | `#E5BD42`（帯の文字は黒） | `#7E6100` | 07 | shop.html |
-| sun_r creative | `#6E6A64`（帯も同色・文字は生成り） | `#5C5852` | 24 | creative.html |
+| sun_r creative | `#9A8C7E`（帯も同色・文字は黒） | `#6B5F53` | 24 | creative.html |
 | sun_r build | `#E2712A`（帯 `#AE5112`） | `#AE5112` | 1329 | build.html |
 
 共通：背景 生成り `#F8F7F3`／本文 黒 `#111111`／英字 Jost 400／和文 Zen Kaku Gothic New。波の音は**入れない**（nail サイト専用）。
@@ -51,7 +51,7 @@ wrangler.jsonc   Cloudflare 設定（name: sun-r-brands）
 - shop／creative のヘッダーのロゴを押すとブランドトップに戻る
 
 ## 補足
-- 色の割り当ては 2026-11 に変更（handmade→マスタード、creative→グレー、build→オレンジ）。番号画像の点々の色もブランド色に合わせてある
-- `logo-gray.svg` は青ロゴの各色を「生成り↔ブランド色」の混色比率のまま `#6E6A64` に置き換えて作成
+- 色の割り当ては 2026-11 に変更（handmade→マスタード、creative→グレー→グレージュ、build→オレンジ）。番号画像の点々の色もブランド色に合わせてある
+- `logo-greige.svg` は青ロゴの各色を「生成り↔ブランド色」の混色比率のまま `#9A8C7E` に置き換えて作成
 - `num-1329.svg` の「3」「2」は num-23 の形をそのまま使い、「1」「9」は同じ太さ・丸みで描き起こし（マスクで点々を入れている）
 - build のページ文言（施工内容・施工事例は準備中）は仮。オーナーから会社情報・問い合わせ先が届いたら差し替え
