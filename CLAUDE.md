@@ -24,7 +24,7 @@ wrangler.jsonc   Cloudflare 設定（name: sun-r-brands）
 
 ## 公開前の仕上げ（済み）
 
-1. nail へのリンク：`data-nail-link` の href はすべて `https://sun-r-nail.pages.dev/`（index.html 3か所、shop.html・creative.html 各1か所、404.html 2か所）
+1. nail へのリンク：`data-nail-link` の href はすべて `https://sun-r-nail.pages.dev/`（index.html 3か所、shop.html・creative.html 各1か所、404.html 2か所）。nail は別サイトなので `target="_blank" rel="noopener"` で新しいタブで開く。nail 側のフッターにも brands へ戻るリンクあり
 2. OGP／canonical：各ページの `<head>` に追加済み。URL は `https://sun-r-brands.pages.dev` の絶対URL（canonical は `/`・`/shop`・`/creative`）。og:image は `images/og-brands.png`／`og-shop.png`／`og-creative.png`（1200×630、生成り背景＋Rロゴ＋ブランド名）
 3. 404ページ：`public/404.html`（黒のR＋「ページが見つかりません」＋トップへ戻る）。どのURLでも表示されるので画像・リンクは `/` 始まりの絶対パス
 
