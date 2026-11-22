@@ -57,7 +57,22 @@ header{position:sticky;top:0;z-index:10;transition:box-shadow .3s ease}
 header.scrolled{box-shadow:0 2px 16px rgba(17,17,17,.06)}
 .header-logo img{transition:transform .4s ease}.header-logo:hover img{transform:rotate(-8deg)}
 #hand,#foot{animation:fadeIn .4s ease both}
-@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal,.stagger>*{opacity:1;transform:none}}
+/* stagger & touch motion */
+@keyframes rpop{0%{opacity:0;transform:scale(.6) rotate(-14deg)}60%{opacity:1;transform:scale(1.08) rotate(3deg)}100%{opacity:1;transform:none}}
+.stagger>*{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i,0)*110ms)}
+.stagger.in>*{opacity:1;transform:none}
+.stagger.in .pop{animation:rpop .8s cubic-bezier(.2,.8,.2,1) backwards;animation-delay:calc(var(--i,0)*110ms + 120ms)}
+.pop{transition:transform .25s ease}
+a{-webkit-tap-highlight-color:transparent}
+a.brand-row:active .pop,a.work-link:active .pop{transform:rotate(-10deg) scale(.92)}
+a.brand-row:active .brand-go,a.work-link:active .work-go{transform:translateX(6px)}
+a.brand-row:active p:first-of-type,a.work-link:active p:first-of-type{color:#111}
+.btn:active{transform:scale(.96)!important;box-shadow:none!important}
+.header-logo:active img{transform:rotate(-12deg)}
+@media(hover:hover){a.brand-row:hover .pop,a.work-link:hover .pop{transform:rotate(-6deg)}}
+@media (prefers-reduced-motion: reduce){.stagger>*{opacity:1!important;transform:none!important}}
+
 </style>
 <style>
 .sound{min-height:44px;padding:0 14px;border:1px solid #CFCAC4;border-radius:999px;background:transparent;color:#111111;font:400 12px/1 'Jost',sans-serif;letter-spacing:.14em;cursor:pointer;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
@@ -91,14 +106,14 @@ header.scrolled{box-shadow:0 2px 16px rgba(17,17,17,.06)}
 </section>
 
 <section id="brands" style="border-top: 1px solid #E6E1DB; padding: clamp(56px,8vw,112px) 0">
-<div class="wrap two reveal">
-<div style="display: flex; flex-direction: column; gap: 12px">
+<div class="wrap two">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 12px">
 <p class="label" style="margin: 0">BRANDS</p>
 <h2 style="margin: 0; font-family: 'Jost', sans-serif; font-weight: 400; font-size: clamp(26px,3vw,34px); letter-spacing: 0.1em; line-height: 1.3">sun_r brands</h2>
 </div>
-<div style="border-top: 1px solid #E6E1DB">
+<div class="stagger" style="border-top: 1px solid #E6E1DB">
 <a href="https://sun-r-nail.pages.dev/" data-nail-link target="_blank" rel="noopener" class="brand-row" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: clamp(16px,3vw,32px); padding: clamp(22px,3vw,32px) 0; border-bottom: 1px solid #E6E1DB">
-<span style="position: relative; flex: none; display: block; width: clamp(34px,3.4vw,42px);"><img src="images/logo-blue.svg" alt="" width="64" height="64" style="width: 100%; height: auto; display: block"><img src="images/num-23.svg" alt="" style="position: absolute; right: 11%; bottom: 12%; height: 8%; width: auto; display: block"></span>
+<span class="pop" style="position: relative; flex: none; display: block; width: clamp(34px,3.4vw,42px);"><img src="images/logo-blue.svg" alt="" width="64" height="64" style="width: 100%; height: auto; display: block"><img src="images/num-23.svg" alt="" style="position: absolute; right: 11%; bottom: 12%; height: 8%; width: auto; display: block"></span>
 <div style="flex: 1 1 auto; min-width: 0">
 <p style="margin: 0; font-family: 'Jost', sans-serif; font-size: clamp(20px,2.4vw,26px); letter-spacing: 0.1em; line-height: 1.3;">nail</p>
 <p style="margin: 4px 0 0; color: #555555; font-size: 14px">岸和田のプライベートネイルサロン</p>
@@ -106,7 +121,7 @@ header.scrolled{box-shadow:0 2px 16px rgba(17,17,17,.06)}
 <span class="brand-go" style="flex: none; font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 0.18em; color: #134CA5; white-space: nowrap">VIEW →</span>
 </a>
 <a href="shop.html" class="brand-row" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: clamp(16px,3vw,32px); padding: clamp(22px,3vw,32px) 0; border-bottom: 1px solid #E6E1DB">
-<span style="position: relative; flex: none; display: block; width: clamp(34px,3.4vw,42px);"><img src="images/logo-yellow.svg" alt="" width="64" height="64" style="width: 100%; height: auto; display: block"><img src="images/num-07.svg" alt="" style="position: absolute; right: 11%; bottom: 12%; height: 8%; width: auto; display: block"></span>
+<span class="pop" style="position: relative; flex: none; display: block; width: clamp(34px,3.4vw,42px);"><img src="images/logo-yellow.svg" alt="" width="64" height="64" style="width: 100%; height: auto; display: block"><img src="images/num-07.svg" alt="" style="position: absolute; right: 11%; bottom: 12%; height: 8%; width: auto; display: block"></span>
 <div style="flex: 1 1 auto; min-width: 0">
 <p style="margin: 0; font-family: 'Jost', sans-serif; font-size: clamp(20px,2.4vw,26px); letter-spacing: 0.1em; line-height: 1.3;">handmade shop</p>
 <p style="margin: 4px 0 0; color: #555555; font-size: 14px">プリザーブドフラワーなどのハンドメイド作品</p>
@@ -114,7 +129,7 @@ header.scrolled{box-shadow:0 2px 16px rgba(17,17,17,.06)}
 <span class="brand-go" style="flex: none; font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 0.18em; color: #7E6100; white-space: nowrap">COMING SOON</span>
 </a>
 <a href="creative.html" class="brand-row" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: clamp(16px,3vw,32px); padding: clamp(22px,3vw,32px) 0; border-bottom: 1px solid #E6E1DB">
-<span style="position: relative; flex: none; display: block; width: clamp(34px,3.4vw,42px);"><img src="images/logo-greige.svg" alt="" width="64" height="64" style="width: 100%; height: auto; display: block"><img src="images/num-24.svg" alt="" style="position: absolute; right: 11%; bottom: 12%; height: 8%; width: auto; display: block"></span>
+<span class="pop" style="position: relative; flex: none; display: block; width: clamp(34px,3.4vw,42px);"><img src="images/logo-greige.svg" alt="" width="64" height="64" style="width: 100%; height: auto; display: block"><img src="images/num-24.svg" alt="" style="position: absolute; right: 11%; bottom: 12%; height: 8%; width: auto; display: block"></span>
 <div style="flex: 1 1 auto; min-width: 0">
 <p style="margin: 0; font-family: 'Jost', sans-serif; font-size: clamp(20px,2.4vw,26px); letter-spacing: 0.1em; line-height: 1.3;">creative</p>
 <p style="margin: 4px 0 0; color: #555555; font-size: 14px">S/TOOL・NURS など、アプリとツールの制作</p>
@@ -122,7 +137,7 @@ header.scrolled{box-shadow:0 2px 16px rgba(17,17,17,.06)}
 <span class="brand-go" style="flex: none; font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 0.18em; color: #6B5F53; white-space: nowrap">VIEW →</span>
 </a>
 <a href="build.html" class="brand-row" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: clamp(16px,3vw,32px); padding: clamp(22px,3vw,32px) 0; border-bottom: 1px solid #E6E1DB">
-<span style="position: relative; flex: none; display: block; width: clamp(34px,3.4vw,42px);"><img src="images/logo-orange.svg" alt="" width="64" height="64" style="width: 100%; height: auto; display: block"><img src="images/num-1329.svg" alt="" style="position: absolute; right: 11%; bottom: 12%; height: 8%; width: auto; display: block"></span>
+<span class="pop" style="position: relative; flex: none; display: block; width: clamp(34px,3.4vw,42px);"><img src="images/logo-orange.svg" alt="" width="64" height="64" style="width: 100%; height: auto; display: block"><img src="images/num-1329.svg" alt="" style="position: absolute; right: 11%; bottom: 12%; height: 8%; width: auto; display: block"></span>
 <div style="flex: 1 1 auto; min-width: 0">
 <p style="margin: 0; font-family: 'Jost', sans-serif; font-size: clamp(20px,2.4vw,26px); letter-spacing: 0.1em; line-height: 1.3;">build</p>
 <p style="margin: 4px 0 0; color: #555555; font-size: 14px">キッチンの施工会社</p>
@@ -134,9 +149,9 @@ header.scrolled{box-shadow:0 2px 16px rgba(17,17,17,.06)}
 </section>
 
 <section id="about" style="border-top: 1px solid #E6E1DB; padding: clamp(48px,6vw,88px) 0">
-<div class="wrap two reveal">
-<h2 class="label about-label" style="margin: 0">ABOUT</h2>
-<dl style="margin: 0; border-top: 1px solid #E6E1DB">
+<div class="wrap two">
+<h2 class="label about-label reveal" style="margin: 0">ABOUT</h2>
+<dl class="stagger" style="margin: 0; border-top: 1px solid #E6E1DB">
 <div class="menu-row" style="justify-content: flex-start; align-items: baseline; gap: clamp(20px,4vw,48px)"><dt style="flex: none; width: 6em; color: #6B6B6B; font-size: 14px">屋号</dt><dd style="margin: 0; min-width: 0; font-family: 'Jost', 'Zen Kaku Gothic New', sans-serif; letter-spacing: 0.06em">sun_r</dd></div>
 <div class="menu-row" style="justify-content: flex-start; align-items: baseline; gap: clamp(20px,4vw,48px)"><dt style="flex: none; width: 6em; color: #6B6B6B; font-size: 14px">代表</dt><dd style="margin: 0; min-width: 0">門林 由佳</dd></div>
 <div class="menu-row" style="justify-content: flex-start; align-items: baseline; gap: clamp(20px,4vw,48px)"><dt style="flex: none; width: 6em; color: #6B6B6B; font-size: 14px">事業内容</dt><dd style="margin: 0; min-width: 0">ネイルサロン・ハンドメイド・アプリ制作・キッチン施工</dd></div>
@@ -153,7 +168,9 @@ header.scrolled{box-shadow:0 2px 16px rgba(17,17,17,.06)}
 </div>
 <script>
 {
-  const els = document.querySelectorAll('.reveal');
+  document.querySelectorAll('.stagger').forEach((g) => [...g.children].forEach((c, i) => c.style.setProperty('--i', i)));
+  document.addEventListener('touchstart', () => {}, { passive: true });
+  const els = document.querySelectorAll('.reveal, .stagger');
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });

@@ -56,4 +56,5 @@ wrangler.jsonc   Cloudflare 設定（name: sun-r-brands）
 - `num-1329.svg` の「3」「2」は num-23 の形をそのまま使い、「1」「9」は同じ太さ・丸みで描き起こし（マスクで点々を入れている）
 - トップに ABOUT（見出しは「ABOUT」のラベルだけ。中身は 屋号 sun_r／代表 門林 由佳／事業内容）。個人事業で法人化していないため肩書きは「代表」（「代表取締役」は使わない。法人化したら変更）
 - PWA／ホーム画面アイコン：`public/manifest.webmanifest`（名前 sun_r brands、短い名前 sun_r、start_url `/`）。アイコンは生成り背景に黒のR（`images/icon-192.png`・`icon-512.png`・`icon-maskable-512.png`、iPhone 用 `apple-touch-icon.png` 180px）。全ページの `<head>` から読み込み。各ページのタブのアイコン（favicon）はブランド色のRのまま
+- スマホ向けの演出：一覧（トップのブランド・ABOUT、shop／build の項目、creative のアプリ）は `.stagger` で1行ずつ順に浮き上がる。トップのブランドのR・S/TOOL アイコンは `.pop` で表示時にポップ、タップ中に傾く（iOS で :active を効かせるため空の touchstart を登録）。「視差効果を減らす」がオンなら全部止まり、最初から表示される
 - build のページ文言（施工内容・施工事例は準備中）は仮。オーナーから会社情報・問い合わせ先が届いたら差し替え

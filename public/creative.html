@@ -57,7 +57,22 @@ header{position:sticky;top:0;z-index:10;transition:box-shadow .3s ease}
 header.scrolled{box-shadow:0 2px 16px rgba(17,17,17,.06)}
 .header-logo img{transition:transform .4s ease}.header-logo:hover img{transform:rotate(-8deg)}
 #hand,#foot{animation:fadeIn .4s ease both}
-@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal,.stagger>*{opacity:1;transform:none}}
+/* stagger & touch motion */
+@keyframes rpop{0%{opacity:0;transform:scale(.6) rotate(-14deg)}60%{opacity:1;transform:scale(1.08) rotate(3deg)}100%{opacity:1;transform:none}}
+.stagger>*{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i,0)*110ms)}
+.stagger.in>*{opacity:1;transform:none}
+.stagger.in .pop{animation:rpop .8s cubic-bezier(.2,.8,.2,1) backwards;animation-delay:calc(var(--i,0)*110ms + 120ms)}
+.pop{transition:transform .25s ease}
+a{-webkit-tap-highlight-color:transparent}
+a.brand-row:active .pop,a.work-link:active .pop{transform:rotate(-10deg) scale(.92)}
+a.brand-row:active .brand-go,a.work-link:active .work-go{transform:translateX(6px)}
+a.brand-row:active p:first-of-type,a.work-link:active p:first-of-type{color:#111}
+.btn:active{transform:scale(.96)!important;box-shadow:none!important}
+.header-logo:active img{transform:rotate(-12deg)}
+@media(hover:hover){a.brand-row:hover .pop,a.work-link:hover .pop{transform:rotate(-6deg)}}
+@media (prefers-reduced-motion: reduce){.stagger>*{opacity:1!important;transform:none!important}}
+
 </style>
 <style>
 .sound{min-height:44px;padding:0 14px;border:1px solid #CFCAC4;border-radius:999px;background:transparent;color:#111111;font:400 12px/1 'Jost',sans-serif;letter-spacing:.14em;cursor:pointer;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
@@ -89,15 +104,15 @@ header.scrolled{box-shadow:0 2px 16px rgba(17,17,17,.06)}
 </section>
 
 <section id="works" style="border-top: 1px solid #E6E1DB; padding: clamp(56px,8vw,112px) 0">
-<div class="wrap two reveal">
-<div style="display: flex; flex-direction: column; gap: 12px">
+<div class="wrap two">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 12px">
 <p class="label" style="margin: 0">WORKS</p>
 <h2 style="margin: 0; font-weight: 500; font-size: clamp(24px,2.8vw,32px); letter-spacing: 0.04em">制作中のアプリ</h2>
 <p style="margin: 8px 0 0; color: #555555; font-size: 14px">暮らしと仕事の「あったらいいな」を形にしたアプリをつくっています。公開でき次第、ここから使えるようにします。</p>
 </div>
-<div style="border-top: 1px solid #E6E1DB">
+<div class="stagger" style="border-top: 1px solid #E6E1DB">
 <a class="work-row work-link" href="https://stool.nyancolosan.workers.dev/" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; display: flex; align-items: flex-start; gap: clamp(16px,3vw,24px); padding: clamp(22px,3vw,30px) 0; border-bottom: 1px solid #E6E1DB">
-<img src="images/app-stool.png" alt="" width="64" height="64" style="flex: none; width: clamp(52px,6vw,64px); height: auto; aspect-ratio: 1; border-radius: 22%; border: 1px solid #E6E1DB; display: block">
+<img class="pop" src="images/app-stool.png" alt="" width="64" height="64" style="flex: none; width: clamp(52px,6vw,64px); height: auto; aspect-ratio: 1; border-radius: 22%; border: 1px solid #E6E1DB; display: block">
 <div style="flex: 1 1 auto; min-width: 0">
 <p style="margin: 0; font-family: 'Jost', sans-serif; font-size: clamp(22px,2.4vw,28px); letter-spacing: 0.08em; line-height: 1.3">S/TOOL</p>
 <p style="margin: 6px 0 0; color: #555555; font-size: 14px">部屋のレイアウトや家具の配置を考えるための、ルームプランニングアプリ</p>
@@ -134,7 +149,9 @@ header.scrolled{box-shadow:0 2px 16px rgba(17,17,17,.06)}
 </div>
 <script>
 {
-  const els = document.querySelectorAll('.reveal');
+  document.querySelectorAll('.stagger').forEach((g) => [...g.children].forEach((c, i) => c.style.setProperty('--i', i)));
+  document.addEventListener('touchstart', () => {}, { passive: true });
+  const els = document.querySelectorAll('.reveal, .stagger');
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
