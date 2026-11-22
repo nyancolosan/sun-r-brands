@@ -39,6 +39,7 @@ wrangler.jsonc   Cloudflare 設定（name: sun-r-brands）
 
 ## 変更しないこと
 - デザイン（色・フォント・余白・アニメーション）、ブランド番号の位置（Rの右脚の中・右下、生成り色）
+- creative の S/TOOL は公開済み：https://stool.nyancolosan.workers.dev/ へ新しいタブでリンク。アイコンは S/TOOL の PWA アイコン（192px）を `images/app-stool.png` として使用
 - creative のアプリ説明文は仮。オーナーから文言・公開URL（Web版・App Store）が届いたら差し替え／リンク追加。非公開GitHubリポジトリにはリンクしない
 - shop の Instagram リンクは仮で sun_r nail のアカウント（https://www.instagram.com/sun___r_nail/）
 
