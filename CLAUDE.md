@@ -57,5 +57,5 @@ wrangler.jsonc   Cloudflare 設定（name: sun-r-brands）
 - PWA／ホーム画面アイコン：`public/manifest.webmanifest`（名前 sun_r brands、短い名前 sun_r、start_url `/`）。アイコンは生成り背景に黒のR（`images/icon-192.png`・`icon-512.png`・`icon-maskable-512.png`、iPhone 用 `apple-touch-icon.png` 180px）。全ページの `<head>` から読み込み。各ページのタブのアイコン（favicon）はブランド色のRのまま
 - スマホ向けの演出：一覧（トップのブランド・ABOUT、shop／build の項目、creative のアプリ）は `.stagger` で1行ずつ順に浮き上がる。トップのブランドのR・S/TOOL アイコンは `.pop` で表示時にポップ、タップ中に傾く（iOS で :active を効かせるため空の touchstart を登録）。「視差効果を減らす」がオンなら全部止まり、最初から表示される
 - creative のアプリは個人事業「patch」（代表 門林 玲）が開発・提供。creative.html の各アプリに「by patch」、WORKS の説明文と meta description に patch を明記、ページ下に ABOUT（屋号 patch／代表 門林 玲／事業内容／アプリ）
-- トップの nail の行で「nail」の横にネイルのイラスト（`images/nail-illust.png`、ブルー・背景透過、小さく表示しても線が消えないよう太めに加工）。nail サイトのヒーローでは同じイラストを生成り色で R の中に入れている
+- トップの nail の行で「nail」の横にネイルのイラスト（`images/nail-illust.png`、黒 #111111・背景透過、幅 19〜23px。小さく表示しても線が消えないよう太めに加工）。nail サイトのヒーローでは同じイラストを生成り色で R の中に入れている
 - build のページ文言（施工内容・施工事例は準備中）は仮。オーナーから会社情報・問い合わせ先が届いたら差し替え
