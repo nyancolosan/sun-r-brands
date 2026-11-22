@@ -1,0 +1,9 @@
+{
+  // sun_r brands — 静的サイト（Cloudflare Workers の静的アセット配信）
+  "name": "sun-r-brands",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page"
+  }
+}
