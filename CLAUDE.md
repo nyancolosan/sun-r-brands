@@ -1,5 +1,11 @@
 # sun_r brands — ブランドサイト 引き継ぎ
 
+## 作業ルール
+- 変更を push（＝公開サイトに反映）したら、返信に必ず公開URLを添える（変更したページのURL。両サイトに関わる場合は両方）
+  - sun_r brands：https://sun-r-brands.pages.dev/（/shop・/creative・/build）
+  - sun_r nail：https://sun-r-nail.pages.dev/
+
+
 「sun_r」ブランドの総合サイト。**ネイルサロンのサイト（sun_r nail）とは別のサイト**として Cloudflare で公開する。
 sun_r nail のサイト・リポジトリには手を入れないこと（nail は既存サイトのまま残す）。
 
