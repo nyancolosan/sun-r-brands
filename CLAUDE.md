@@ -59,6 +59,12 @@ wrangler.jsonc   Cloudflare 設定（name: sun-r-brands）
 - creative のアプリ説明文は仮。オーナーから文言・公開URL（Web版・App Store）が届いたら差し替え／リンク追加。非公開GitHubリポジトリにはリンクしない
 - shop の Instagram は handmade 専用アカウント（https://www.instagram.com/sun___r292324/）。ヘッダーと NEWS の帯の2か所
 
+## 検索エンジン向け（2026-11-23 追加）
+- `public/robots.txt`（全ページ許可＋sitemap の場所）／`public/sitemap.xml`（/・/shop・/creative・/build）。ページを増やしたら sitemap に追加し lastmod を更新
+- トップ（index.html）に構造化データ（JSON-LD・Organization：name sun_r、sameAs に nail サイトと Instagram 2つ、brand に4ブランド）
+- 404 は noindex のまま
+- 次の一歩（オーナー作業）：Google Search Console に登録し sitemap を送信。確認用のメタタグが届いたら各ページの head に入れる
+
 ## 確認項目（公開後）
 - 375px／1280px で横スクロールが出ない
 - トップの nail の行・ナビ「NAIL」・フッターの「sun_r nail」が https://sun-r-nail.pages.dev/ に飛ぶ
