@@ -66,8 +66,7 @@ header.scrolled{box-shadow:0 2px 16px rgba(17,17,17,.06)}
 .product:hover .product-img img{transform:scale(1.04) rotate(-1.5deg)}
 .product-name{font-family:'League Spartan',sans-serif;font-size:20px;letter-spacing:.12em;line-height:1}
 .product-status{font-size:12px;color:#7E6100;letter-spacing:.06em}
-@media(max-width:860px){.products{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:420px){.products{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:860px){.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 16px}.product:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:calc(50% - 8px)}.product-name{font-size:17px}}
 /* stagger & touch motion */
 @keyframes rpop{0%{opacity:0;transform:scale(.6) rotate(-14deg)}60%{opacity:1;transform:scale(1.08) rotate(3deg)}100%{opacity:1;transform:none}}
 .stagger>*{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i,0)*110ms)}
