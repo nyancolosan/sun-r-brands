@@ -29,7 +29,7 @@ wrangler.jsonc   Cloudflare 設定（name: sun-r-brands）
 | sun_r creative | `#9A8C7E`（帯も同色・文字は黒） | `#6B5F53` | creative.html |
 | sun_r build | `#E2712A`（帯 `#AE5112`） | `#AE5112` | build.html |
 
-共通：背景 生成り `#F8F7F3`／本文 黒 `#111111`／英字 Smooch Sans 400／和文 Noto Sans JP（2026-11-23 に Jost／Zen Kaku Gothic New から変更）。波の音は**入れない**（nail サイト専用）。
+共通：背景 生成り `#F8F7F3`／本文 黒 `#111111`／英字 Science Gothic 400／和文 Noto Sans JP（2026-11-23 に Jost／Zen Kaku Gothic New から変更。英字は Smooch Sans を経て Science Gothic に）。波の音は**入れない**（nail サイト専用）。
 
 ## 公開前の仕上げ（済み）
 
