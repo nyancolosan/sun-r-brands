@@ -63,7 +63,7 @@ wrangler.jsonc   Cloudflare 設定（name: sun-r-brands）
 - `public/robots.txt`（全ページ許可＋sitemap の場所）／`public/sitemap.xml`（/・/shop・/creative・/build）。ページを増やしたら sitemap に追加し lastmod を更新
 - トップ（index.html）に構造化データ（JSON-LD・Organization：name sun_r、sameAs に nail サイトと Instagram 2つ、brand に4ブランド）
 - 404 は noindex のまま
-- 次の一歩（オーナー作業）：Google Search Console に登録し sitemap を送信。確認用のメタタグが届いたら各ページの head に入れる
+- Google Search Console：URL プレフィックス `https://sun-r-brands.pages.dev/` で登録。確認用メタタグ（google-site-verification）を index.html の head に入れている（消すと確認が外れるので残す）。登録後に sitemap.xml を送信
 
 ## 確認項目（公開後）
 - 375px／1280px で横スクロールが出ない
