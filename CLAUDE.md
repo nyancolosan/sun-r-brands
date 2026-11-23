@@ -67,7 +67,7 @@ wrangler.jsonc   Cloudflare 設定（name: sun-r-brands）
 ## 補足
 - 色の割り当ては 2026-11 に変更（handmade→マスタード、creative→グレー→グレージュ、build→オレンジ）
 - `logo-greige.svg`（creative）は zip に無いので、青い花の `#134CA5` を `#9A8C7E` に置き換えて作成
-- 名前の由来（トップの NAME セクション、ブランド一覧と ABOUT の間）：s＝stitch（handmade shop）／u＝useful（creative）／n＝nail（nail）／_＝link（all brands・4つをつなぐ）／r＝renovation（build）。文字は各ブランドの文字用の濃い色。PC は5列、スマホ（600px 以下）は縦に並ぶ。各マスは各ブランドへのリンク（_ は #brands へ）。ヒーローの「NAIL・HANDMADE・CREATIVE・BUILD」もそれぞれのページへのリンク
+- 名前の由来（トップの NAME セクション、ブランド一覧と ABOUT の間）：s＝stitch（handmade shop）／u＝useful（creative）／n＝nail（nail）／_＝link（all brands・4つをつなぐ）／r＝renovation（build）。文字の色は各ブランドの花（ロゴ）と同じ色：s #E5BD42／u #9A8C7E／n #134CA5／_ #111111／r #E2712A。PC は5列、スマホ（600px 以下）は縦に並ぶ。各マスは各ブランドへのリンク（_ は #brands へ）。ヒーローの「NAIL・HANDMADE・CREATIVE・BUILD」もそれぞれのページへのリンク
 - トップに ABOUT（見出しは「ABOUT」のラベルだけ。中身は 屋号 sun_r／代表 門林 由佳／事業内容）。個人事業で法人化していないため肩書きは「代表」（「代表取締役」は使わない。法人化したら変更）
 - PWA／ホーム画面アイコン：`public/manifest.webmanifest`（名前 sun_r brands、短い名前 sun_r、start_url `/`）。アイコンは生成り背景に黒の花（`images/icon-192.png`・`icon-512.png`・`icon-maskable-512.png`、iPhone 用 `apple-touch-icon.png` 180px）。全ページの `<head>` から読み込み。各ページのタブのアイコン（favicon）はブランド色の花
 - スマホ向けの演出：一覧（トップのブランド・ABOUT、shop／build の項目、creative のアプリ）は `.stagger` で1行ずつ順に浮き上がる。トップのブランドの花・S/TOOL アイコンは `.pop` で表示時にポップ、タップ中に傾く（iOS で :active を効かせるため空の touchstart を登録）。「視差効果を減らす」がオンなら全部止まり、最初から表示される
