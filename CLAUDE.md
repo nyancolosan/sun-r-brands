@@ -33,7 +33,7 @@ wrangler.jsonc   Cloudflare 設定（name: sun-r-brands）
 
 ## 公開前の仕上げ（済み）
 
-1. nail へのリンク：`data-nail-link` の href はすべて `https://sun-r-nail.pages.dev/`（index.html 3か所、shop.html・creative.html・build.html 各1か所、404.html 2か所）。nail は別サイトなので `target="_blank" rel="noopener"` で新しいタブで開く。nail 側のフッターにも brands へ戻るリンクあり
+1. nail へのリンク：`data-nail-link` の href はすべて `https://sun-r-nail.pages.dev/`（index.html 5か所〈ヘッダーナビ・ヒーローの NAIL・ブランド一覧・NAME の n・フッター〉、shop.html・creative.html・build.html 各1か所、404.html 2か所）。nail は別サイトなので `target="_blank" rel="noopener"` で新しいタブで開く。nail 側のフッターにも brands へ戻るリンクあり
 2. OGP／canonical：各ページの `<head>` に追加済み。URL は `https://sun-r-brands.pages.dev` の絶対URL（canonical は `/`・`/shop`・`/creative`・`/build`）。og:image は `images/og-brands.png`／`og-shop.png`／`og-creative.png`／`og-build.png`（1200×630、生成り背景＋花のロゴ＋ブランド名）
 3. 404ページ：`public/404.html`（黒の花＋「ページが見つかりません」＋トップへ戻る）。どのURLでも表示されるので画像・リンクは `/` 始まりの絶対パス
 
@@ -61,7 +61,7 @@ wrangler.jsonc   Cloudflare 設定（name: sun-r-brands）
 ## 補足
 - 色の割り当ては 2026-11 に変更（handmade→マスタード、creative→グレー→グレージュ、build→オレンジ）
 - `logo-greige.svg`（creative）は zip に無いので、青い花の `#134CA5` を `#9A8C7E` に置き換えて作成
-- 名前の由来（トップの NAME セクション、ブランド一覧と ABOUT の間）：s＝stitch（handmade shop）／u＝useful（creative）／n＝nail（nail）／_＝link（all brands・4つをつなぐ）／r＝renovation（build）。文字は各ブランドの文字用の濃い色。PC は5列、スマホ（600px 以下）は縦に並ぶ
+- 名前の由来（トップの NAME セクション、ブランド一覧と ABOUT の間）：s＝stitch（handmade shop）／u＝useful（creative）／n＝nail（nail）／_＝link（all brands・4つをつなぐ）／r＝renovation（build）。文字は各ブランドの文字用の濃い色。PC は5列、スマホ（600px 以下）は縦に並ぶ。各マスは各ブランドへのリンク（_ は #brands へ）。ヒーローの「NAIL・HANDMADE・CREATIVE・BUILD」もそれぞれのページへのリンク
 - トップに ABOUT（見出しは「ABOUT」のラベルだけ。中身は 屋号 sun_r／代表 門林 由佳／事業内容）。個人事業で法人化していないため肩書きは「代表」（「代表取締役」は使わない。法人化したら変更）
 - PWA／ホーム画面アイコン：`public/manifest.webmanifest`（名前 sun_r brands、短い名前 sun_r、start_url `/`）。アイコンは生成り背景に黒の花（`images/icon-192.png`・`icon-512.png`・`icon-maskable-512.png`、iPhone 用 `apple-touch-icon.png` 180px）。全ページの `<head>` から読み込み。各ページのタブのアイコン（favicon）はブランド色の花
 - スマホ向けの演出：一覧（トップのブランド・ABOUT、shop／build の項目、creative のアプリ）は `.stagger` で1行ずつ順に浮き上がる。トップのブランドの花・S/TOOL アイコンは `.pop` で表示時にポップ、タップ中に傾く（iOS で :active を効かせるため空の touchstart を登録）。「視差効果を減らす」がオンなら全部止まり、最初から表示される
