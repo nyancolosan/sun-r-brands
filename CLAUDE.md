@@ -4,10 +4,11 @@
 - 変更を push（＝公開サイトに反映）したら、返信に必ず公開URLを添える（変更したページのURL。両サイトに関わる場合は両方）
   - sun_r brands：https://sun-r-brands.pages.dev/（/shop・/creative・/build）
   - sun_r nail：https://sun-r-nail.pages.dev/
+- sun_r nail と sun_r brands は連動させる。片方を変えたら、もう片方に関わる部分（nail のロゴ・表示名・色・URL・説明文、フッターのブランドナビ、brands のトップの nail の行など）も同じ作業の中で更新し、両方を push する（リポジトリ：`nyancolosan/sun-r-nail`／`nyancolosan/sun-r-brands`）
 
 
 「sun_r」ブランドの総合サイト。**ネイルサロンのサイト（sun_r nail）とは別のサイト**として Cloudflare で公開する。
-sun_r nail のサイト・リポジトリには手を入れないこと（nail は既存サイトのまま残す）。
+sun_r nail は別サイト・別リポジトリだが、上の作業ルールのとおり関連する変更は両方に反映する。
 
 ## 構成
 
@@ -23,7 +24,7 @@ wrangler.jsonc   Cloudflare 設定（name: sun-r-brands）
 
 | ブランド | 色（ロゴ／帯） | 文字用の濃い色 | 行き先 |
 |---|---|---|---|
-| sun_r nail | `#134CA5` | `#134CA5` | **外部サイト** https://sun-r-nail.pages.dev/ |
+| sun_r nail | `#134CA5`（ロゴは R ではなく青い花 `logo-flower-blue.svg`） | `#134CA5` | **外部サイト** https://sun-r-nail.pages.dev/ |
 | sun_r handmade shop | `#E5BD42`（帯の文字は黒） | `#7E6100` | shop.html |
 | sun_r creative | `#9A8C7E`（帯も同色・文字は黒） | `#6B5F53` | creative.html |
 | sun_r build | `#E2712A`（帯 `#AE5112`） | `#AE5112` | build.html |
