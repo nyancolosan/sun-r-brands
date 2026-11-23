@@ -72,5 +72,5 @@ wrangler.jsonc   Cloudflare 設定（name: sun-r-brands）
 - PWA／ホーム画面アイコン：`public/manifest.webmanifest`（名前 sun_r brands、短い名前 sun_r、start_url `/`）。アイコンは生成り背景に黒の花（`images/icon-192.png`・`icon-512.png`・`icon-maskable-512.png`、iPhone 用 `apple-touch-icon.png` 180px）。全ページの `<head>` から読み込み。各ページのタブのアイコン（favicon）はブランド色の花
 - スマホ向けの演出：一覧（トップのブランド・ABOUT、shop／build の項目、creative のアプリ）は `.stagger` で1行ずつ順に浮き上がる。トップのブランドの花・S/TOOL アイコンは `.pop` で表示時にポップ、タップ中に傾く（iOS で :active を効かせるため空の touchstart を登録）。「視差効果を減らす」がオンなら全部止まり、最初から表示される
 - creative のアプリは個人事業「patch」（代表 門林 玲）が開発・提供。creative.html の各アプリに「by patch」、WORKS の説明文と meta description に patch を明記、ページ下に ABOUT（屋号 patch／代表 門林 玲／事業内容／アプリ）
-- stitch（shop.html）の PRODUCTS「作品」：SR01・SR02・SR03（`images/products/sr01〜03.webp`。オーナー支給の写真から、外周につながる白背景だけを抜いた透過 WebP・長辺720px）。正方形の枠（#F1EEE6）に object-fit: contain で収める。価格・購入リンクは未定なので「準備中」表示。PC 3列／タブレット 2列／420px 以下 1列
+- stitch（shop.html）の PRODUCTS「作品」：SR01・SR02・SR03（`images/products/sr01〜03.webp`。オーナー支給の写真から、外周につながる白背景だけを抜いた透過 WebP・長辺720px）。枠や背景色はなし（生成りの背景にそのまま置く）。大きさは正方形のエリアに object-fit: contain でそろえる。価格・購入リンクは未定なので「準備中」表示。PC 3列／タブレット 2列／420px 以下 1列
 - build のページ文言（施工内容・施工事例は準備中）は仮。オーナーから会社情報・問い合わせ先が届いたら差し替え
