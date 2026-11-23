@@ -15,9 +15,9 @@ sun_r nail は別サイト・別リポジトリだが、上の作業ルールの
 ```
 public/
   index.html     ブランドトップ（4ブランドの入口）     黒の花
-  shop.html      sun_r handmade shop（COMING SOON）    マスタード
-  creative.html  sun_r creative（アプリ）               グレージュ
-  build.html     sun_r build（キッチン施工・COMING SOON） オレンジ
+  shop.html      sun_r stitch（旧 handmade shop・COMING SOON）  マスタード
+  creative.html  sun_r useful（旧 creative・アプリ）            グレージュ
+  build.html     sun_r renovation（旧 build・キッチン施工・COMING SOON） オレンジ
   images/        ロゴ（手描きの花：black/blue/orange/yellow/greige）、OGP画像（og-*.png）
 wrangler.jsonc   Cloudflare 設定（name: sun-r-brands）
 ```
@@ -25,11 +25,17 @@ wrangler.jsonc   Cloudflare 設定（name: sun-r-brands）
 | ブランド | 色（ロゴ／帯） | 文字用の濃い色 | 行き先 |
 |---|---|---|---|
 | sun_r nail | `#134CA5`（青い花 `logo-blue.svg`。nail サイトのロゴと同じ） | `#134CA5` | **外部サイト** https://sun-r-nail.pages.dev/ |
-| sun_r handmade shop | `#E5BD42`（帯の文字は黒） | `#7E6100` | shop.html |
-| sun_r creative | `#9A8C7E`（帯も同色・文字は黒） | `#6B5F53` | creative.html |
-| sun_r build | `#E2712A`（帯 `#AE5112`） | `#AE5112` | build.html |
+| sun_r stitch（旧 handmade shop） | `#E5BD42`（帯の文字は黒） | `#7E6100` | shop.html |
+| sun_r useful（旧 creative） | `#9A8C7E`（帯も同色・文字は黒） | `#6B5F53` | creative.html |
+| sun_r renovation（旧 build） | `#E2712A`（帯 `#AE5112`） | `#AE5112` | build.html |
 
 共通：背景 生成り `#F8F7F3`／本文 黒 `#111111`／英字 League Spartan Regular（オーナー支給の TTF を woff2 に変換し `public/fonts/league-spartan-regular.woff2` から自前で配信。SIL OFL）／和文 Noto Sans JP（2026-11-23 に Jost／Zen Kaku Gothic New から変更。英字は Smooch Sans・Science Gothic・Caveat・Knewave・Boogaloo・Sue Ellen Francisco・Pacifico・Abril Fatface・Cinzel・Special Elite・Mrs Saint Delafield・Abril Fatface を経て League Spartan に）。波の音は**入れない**（nail サイト専用）。
+
+## ブランド名（2026-11-23 変更）
+- sun_r の頭文字にそろえて改名：s＝**stitch**（旧 handmade shop）／u＝**useful**（旧 creative）／n＝**nail**／_＝つなぐ線／r＝**renovation**（旧 build）
+- 並び順はどこでも stitch・useful・nail・renovation（ヘッダー・フッター・トップの一覧・ヒーローのラベル）
+- URL（/shop・/creative・/build）とファイル名は変えていない（共有済みリンクを壊さないため）
+- 各ページのキャッチ（PRESERVED FLOWER & HANDMADE／APPS & TOOLS／KITCHEN CONSTRUCTION）や説明文はそのまま
 
 ## 公開前の仕上げ（済み）
 
