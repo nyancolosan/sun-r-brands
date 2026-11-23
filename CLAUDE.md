@@ -29,7 +29,7 @@ wrangler.jsonc   Cloudflare 設定（name: sun-r-brands）
 | sun_r creative | `#9A8C7E`（帯も同色・文字は黒） | `#6B5F53` | creative.html |
 | sun_r build | `#E2712A`（帯 `#AE5112`） | `#AE5112` | build.html |
 
-共通：背景 生成り `#F8F7F3`／本文 黒 `#111111`／英字 Mrs Saint Delafield（細い筆記体・1スタイルのみ。大文字は装飾が強く読みにくい）／和文 Noto Sans JP（2026-11-23 に Jost／Zen Kaku Gothic New から変更。英字は Smooch Sans・Science Gothic・Caveat・Knewave・Boogaloo・Sue Ellen Francisco・Pacifico・Abril Fatface・Cinzel・Special Elite を経て Mrs Saint Delafield に）。波の音は**入れない**（nail サイト専用）。
+共通：背景 生成り `#F8F7F3`／本文 黒 `#111111`／英字 Abril Fatface（太く強弱のある装飾セリフ体・1スタイルのみ）／和文 Noto Sans JP（2026-11-23 に Jost／Zen Kaku Gothic New から変更。英字は Smooch Sans・Science Gothic・Caveat・Knewave・Boogaloo・Sue Ellen Francisco・Pacifico・Abril Fatface・Cinzel・Special Elite・Mrs Saint Delafield を経て Abril Fatface に戻した）。波の音は**入れない**（nail サイト専用）。
 
 ## 公開前の仕上げ（済み）
 
