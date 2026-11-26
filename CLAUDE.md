@@ -56,6 +56,7 @@ wrangler.jsonc   Cloudflare 設定（name: sun-r-brands）
 - デザイン（色・フォント・余白・アニメーション）
 - ロゴは 2026-11-23 に R から手描きの花に変更（オーナー提供の最新版 zip の `logo-black/blue/orange/yellow.svg`）。花びらの白いハイライトは生成り `#F8F7F3`。ロゴにはブランド番号を入れない
 - creative の S/TOOL は公開済み：https://stool.nyancolosan.workers.dev/ へ新しいタブでリンク。アイコンは S/TOOL の PWA アイコン（192px）を `images/app-stool.png` として使用
+- creative の NURS は開発中（リンクなし・IN DEVELOPMENT）。アイコンはオーナー支給の画像を 192px にした `images/app-nurs.png`（S/TOOL と同じ角丸・枠線・表示時ポップ）
 - creative のアプリ説明文は仮。オーナーから文言・公開URL（Web版・App Store）が届いたら差し替え／リンク追加。非公開GitHubリポジトリにはリンクしない
 - shop の Instagram は handmade 専用アカウント（https://www.instagram.com/sun___r292324/）。ヘッダーと NEWS の帯の2か所
 
